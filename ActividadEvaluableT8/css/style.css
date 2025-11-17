@@ -1,0 +1,203 @@
+*{box-sizing: border-box;}
+
+body {  background-color: rgb(125, 125, 255);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#contenido { 
+
+        background-image: url(../ActividadEvaluableT8/img/fondo.jpg);
+        
+            background-repeat: no-repeat;   
+        
+            background-position: center;
+           
+            background-size: 450px 350px;
+            
+            background-color: rgb(246, 246, 246);
+       
+            width: 50%;
+            
+            border:solid 2px black;
+            
+            padding: 15px;
+           
+            margin-left: 25%;
+}
+
+
+#menu {
+
+    
+            list-style-type: none;
+            background-color: rgba(red, green, blue, alpha);
+            padding: 10px;
+
+            color: white;
+           
+            background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: right;
+           
+
+
+}
+
+li a{
+
+    color: blue;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+
+            background-color: rgba(red, green, blue, alpha);
+          
+            padding: 10px;
+
+}
+
+li a:hover {
+
+    background-color: black;
+    color : orangered;
+
+}
+
+li {
+            text-align: left;
+            display: inline-block;
+            
+
+}
+
+#titulo{
+
+            background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: center;
+           
+            border: solid 4px rgb(23, 23, 58);
+
+            color: rgb(23, 23, 58);
+
+            text-align: center;
+
+}
+
+#componentes {
+           
+            background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: center;
+           
+            border: solid 4px rgb(23, 23, 58);
+
+            color: rgb(23, 23, 58);
+
+            text-align: center;
+}
+
+
+#funcioanmiento {
+
+        background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: center;
+           
+            border: solid 4px rgb(23, 23, 58);
+
+            color: rgb(23, 23, 58);
+
+            text-align: center;
+
+}
+
+#datos { 
+
+    background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: center;
+           
+            border: solid 4px rgb(23, 23, 58);
+
+            color: rgb(23, 23, 58);
+
+            text-align: center;
+    
+}
+
+#areas { 
+
+    background-color: rgb(180, 180, 255);
+            
+            padding: 5px;
+          
+            text-align: center;
+           
+            border: solid 4px rgb(23, 23, 58);
+
+            color: rgb(23, 23, 58);
+
+            text-align: center;
+
+}
+
+caption { 
+
+    color: rgb(23, 23, 58) ;
+
+}
+
+th { 
+
+    color: red;
+     border:solid 2px black;
+}
+
+
+
+tr :hover {
+
+     background-color: black;
+    color : orangered;
+
+}
+
+
+td { 
+
+    color :rgb(23, 23, 58);
+        border:solid 2px black;
+
+
+}
+
+#introduccion { 
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10%;
+ }
+
+#lista { 
+
+    ::first-letter{text-transform:UPPERCASE;}
+    
+ }
+
+ autor { 
+
+
+
+ }
