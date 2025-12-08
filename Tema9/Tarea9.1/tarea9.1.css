@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #111;
+    padding: 15px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.submenu:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 30px;
+    left: 0;
+    padding: 10px 0;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.dropdown li {
+    padding: 8px 15px;
+}
+
+.dropdown li a {
+    color: #111;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(45deg,#8dfd96de,#96ceff);
+    color: white;
+}
+
+.caja {
+    background: white;
+    padding: 25px;
+    margin: 25px auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.multicolumnas .cols {
+    column-count: 2;
+    column-gap: 40px;
+}
+
+.hobbies .flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hobbies .item {
+    background: white;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform .3s;
+}
+
+.hobbies .item:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
