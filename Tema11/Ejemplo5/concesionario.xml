@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concesionario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="concesionario.xsd" provincia="Malaga"></concesionario>
+
+
+    <coche matricula="6732KPC">
+        <marca>Seat</marca>
+        <modelo>Ateca</modelo>
+        <cilindrada>1.7</cilindrada>
+        <combustible>Diesel</combustible>
+        <precio>23.000 </precio>
+        <año>2018</año>
+        <color>negro</color>
+        <interesado>33358679A</interesado>
+        <interesado>32865901C</interesado>
+        <accesorios>aleron llantas  </accesorios>
+    </coche>
+    <coche matricula="9876ABC">
+        <marca>Volksvaguen</marca>
+        <modelo>Polo</modelo>
+        <cilindrada>1.2</cilindrada>
+        <combustible>Gasolina</combustible>
+        <precio>5.000 </precio>
+        <color>rojo</color>
+        <interesado>33358679A</interesado>
+    </coche>

@@ -23,7 +23,7 @@
 
                     </xs:sequence>  
 
-                        <xs:atribute name="Español" type="xs:string" use ="required"></xs:atribute>
+                        <xs:atribute name="Español" type="xs:tipoEspaña" use ="required"></xs:atribute>
                         
                 </xs:complexType>
              </xs:element>
@@ -42,11 +42,15 @@
 
     <xs:simpleType name="tipocompra">
         <xs:restriccion base="xs:integer">
-
-        0
         </xs:restriccion>
-
-
-
     </xs:simpleType>
+    <xs:simpleType name="tipoEspaña">
+        <xs:restriction base ="xs:string">
+            
+            <xs:enumeration value="si"></xs:enumeration>
+            <xs:enumeration value="no"></xs:enumeration>
+            <xs:enumeration value="SI"></xs:enumeration>
+            <xs:enumeration value="NO"></xs:enumeration>
+
+        </xs:restriction>
 </xs:schema>
