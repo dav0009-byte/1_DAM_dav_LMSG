@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns ="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name "listaclientes"> 
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" type="xs:string" max0ccurs ="unbounded"></xs:element>
+                <xs:complexType>
+                    <xs:sequence>
+
+                        <xs:element name="nombre" type ="xs:string"></xs:element>
+                        <xs:element name ="apellido" type ="xs:string"></xs:element>
+
+                        <xs:choice>
+
+                            <xs:element mame="dni" type="xs:string" ></xs:element>
+                            <xs:element name="nie" type="xs:string"></xs:element>
+
+                        </xs:choice>
+
+                            <xs:element name="compras" type="xs:integer"></xs:element>
+                            <xs:element name="regalo" type="xs:string"  minOccurs="0" maxOccurs="unbounded"></xs:element>
+
+                    </xs:sequence>  
+
+                        <xs:atribute name="Español" type="xs:tipoEspaña" use ="required"></xs:atribute>
+                        
+                </xs:complexType>
+             </xs:element>
+       </xs:sequence>
+    </xs:element>
+
+    <!--TIPOS PERSONALIZADOS-->
+
+    <!--Longitud DNI-->
+
+    <xs:simpleType name="tipodni">
+        <xs:restriction base ="xs:string">
+            <xs:lenght value="9"></xs:lenght>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipocompra">
+        <xs:restriccion base="xs:integer">
+        </xs:restriccion>
+    </xs:simpleType>
+    <xs:simpleType name="tipoEspaña">
+        <xs:restriction base ="xs:string">
+            
+            <xs:enumeration value="si"></xs:enumeration>
+            <xs:enumeration value="no"></xs:enumeration>
+            <xs:enumeration value="SI"></xs:enumeration>
+            <xs:enumeration value="NO"></xs:enumeration>
+
+        </xs:restriction>
+</xs:schema>

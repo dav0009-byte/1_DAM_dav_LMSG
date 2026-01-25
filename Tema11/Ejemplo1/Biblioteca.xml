@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Biblioteca.xsd">
+
+    <titulo>Introduccion</titulo>
+    <autor>Alberto Perez</autor>
+    <editorial>Linganguliguacha</editorial>
+    <precio>3000</precio>
+
+</libro>
