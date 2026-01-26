@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <xs:element name "concesionario">
+    <xs:element name="concesionario">
         <xs:complexType>
             <xs:sequence>
 
-            <xs:element name="coche" type="xs:string" max0ccurs ="unbounded"></xs:element>
-
+            <xs:element name="coche" type="xs:string" maxOccurs ="unbounded"></xs:element>
             <xs:complexType>
                 <xs:sequence>
 

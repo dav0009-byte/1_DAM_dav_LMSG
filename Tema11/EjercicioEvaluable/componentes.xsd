@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- Diego Aranda Villar -->
+<xs:element name="listacomponentes">
+
+        <xs:sequence>
+
+            <xs:element name="componente" type ="xs:string" ></xs:element>
+                <xs:complexType>
+
+                    <xs:sequence> <!-- Aqui tenemos varios atributos basicos -->
+
+                        <xs:element name="marca" type="xs:string"></xs:element>
+                        <xs:element name="modelo" type="xs:string"></xs:element>
+                        <xs:element name="categoria" type="tipocategoria"></xs:element>
+                        <xs:element name="precio" type="xs:decimal" ></xs:element>
+
+                    </xs:sequence>  
+
+                    <xs:choice> <!-- Aqui tenemos la primera eleccion que es entre stock y cantidad -->
+
+                        <xs:element name="stock" type="xs:integer" base="unsignedShort"></xs:element>
+                        <xs:element name="cantidad" type="xs:integer" base="unsignedShort"></xs:element>
+
+                    </xs:choice>    
+
+                    <xs:sequence>
+
+                        <xs:element name="fecha_alta" type="xs:date" use ="required"></xs:element>
+                        <xs:element name ="color" type="xs:string"></xs:element>
+                        <xs:element name="garantia" type="tipogarantia"></xs:element>
+                        <xs:element name ="cliente_reserva" type ="tipodni"></xs:element>
+
+                    </xs:sequence>
+                </xs:complexType>
+
+                <xs:sequence>
+
+                    <xs:atribute name="tipo" type="xs:string" use ="required"></xs:atribute>
+
+                </xs:sequence>
+
+        </xs:sequence>
+
+</xs:element> 
+
+<!--Aqui empezamos a poner restricciones -->
+
+<xs:complexType name="tipocategoria">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="CPU"></xs:enumeration>
+        <xs:enumeration value="GPU"></xs:enumeration>
+        <xs:enumeration value="RAM"></xs:enumeration>
+    </xs:restriction>
+</xs:complexType>
+<xs:complexType name="tipodni">
+    <xs:restriction base="xs:string">
+                <xs:pattern value="\d{8}[A-Z]"></xs:pattern>
+                <xs:maxLenght value="2"></xs:maxLenght>
+    </xs:restriction>
+
+</xs:complexType>
+<xs:complexType name ="tipogarantia">
+            <xs:restriction base="xs:unsignedshort">
+
+                <xs:minInclusive value="6"></xs:minInclusive>
+                <xs:maxInclusive value="60"></xs:maxInclusive>
+
+            </xs:restriction>
+        </xs:complexType>
+
+</xs:schema>
