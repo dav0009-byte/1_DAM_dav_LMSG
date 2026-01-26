@@ -18,43 +18,82 @@
 
 </head>
 <body>
-    
-    <Table> <!--Tabla-->
-    <thead>
-        <tr>
-            <th>Provincia</th>
-            <th>Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Malaga</td>
-            <td>1.00 €/kg</td>
-        </tr>
-        <tr>
-            <td>Granada</td>
-            <td>1.25 €/kg</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td>Madrid</td>
-            <td>1.50 €/kg</td>
-        </tr>
-        </tfoot>
-    </Table>
 
     <hr>
 
     <form action="Porceso PHP" method="post">   <!--Registro-->
-        Nombre: <input type="text" name="nombre">
+        <fieldset>
+        <legend><b>Datos personales</b></legend>
+        <p><b>Nombre: </b><input type="text" name="Nombre"
+                        size="45"
+                        placeholder="Indica nombre completo"></p> 
+        <p><b>Fecha de nacimiento: </b><input type="date" name="Fecha"></p>
+        <p><b>Correo</b><input type="email" name="Correo"></p>
+        <p><b>Codigo postal</b><input type="email" name="Codigo postal"></p>
+        <p><b>Dirección</b><input type="email" name="Dirección"></p>
+  
+        <p><b>Ciudad:</b></p>
 
+        <select name="ciudad" size="1">
+
+            <option value="sevilla">Sevilla</option>
+            <option value="malaga">Malaga</option>
+            <option value="granada">Granada</option>
+            <option value="madrid">Madrid</option>
+
+        </select>
+
+        <p><b>Sexo:</b></p>
         <p>
             <input type="radio" name="sexo" value="h"> Hombre
             <input type="radio" name="sexo" value="m"> Mujer
         </p>
+    </fieldset>
+        
 
-        <p>
+        
+    </form>
+
+    <form action="Proceso PHP" method="post">  <!--Seleccion-->
+        
+    <form>
+    <fieldset>
+        <legend>Datos de Interés</legend>
+
+        <div class="grupo">
+            <strong>Estado Civil:</strong><br>
+            <label>
+                <input type="radio" name="estado_civil" value="casado"> Casado
+            </label>
+            <label>
+                <input type="radio" name="estado_civil" value="no_casado"> No Casado
+            </label>
+        </div>
+
+        <div class="grupo">
+            <strong>Hobbies:</strong><br>
+            <label>
+                <input type="checkbox" name="hobbies" value="deporte"> Deporte
+            </label><br>
+            <label>
+                <input type="checkbox" name="hobbies" value="cine"> Cine
+            </label><br>
+            <label>
+                <input type="checkbox" name="hobbies" value="lectura"> Lectura
+            </label><br>
+            <label>
+                <input type="checkbox" name="hobbies" value="correr"> Correr
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Comentarios Adicionales</legend>
+        <textarea placeholder="Escribe tus comentarios aquí"></textarea>
+    </fieldset>
+</form>
+
+<p>
             <input type="submit" value="Enviar">
 
             <input type="reset" value="Borrar"> 
@@ -62,16 +101,6 @@
             <input type="button" value="Hola mundo"
                 onclick="alert ('Hola mundo')" > 
         </p>
-    </form>
-
-    <form action="Proceso PHP" method="post">  <!--Seleccion-->
-        <select name="ciudad" size="1">
-            <option value="malaga">Malaga</option>
-            <option value="granada">Granada</option>
-            <option value="madrid">Madrid</option>
-        </select>
-
-
 
 
 </body>
