@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Página web de ejemplo">
+    <meta name="keywords" content="tienda,boniatos,sevilla">
+    <meta name="author" content="Pepito de los palotes">
+
+    <title>Charset Example</title>
+
+    <style> /* CSS básico */
+    
+
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+
+        .bloque {
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+
+        a:hover {
+            color: red;
+        }
+
+
+        .caja {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Estructura de la página web -->
+
+    <!-- Cabecera de la página web -->
+
+
+    <header class="bloque">
+        <h1>Mi primera página HTML5</h1>
+        <p>Ejemplo educativo</p>
+    </header>
+
+    <!-- Etiquetas semánticas -->
+
+    <main>
+
+        <!-- Etiquetas relacionadas con texto -->
+
+        <section class="bloque">
+
+            <h2>Texto</h2>
+            <p>Esto es un <strong>texto importante</strong> y esto es <em>texto enfatizado</em>.</p>
+
+            <p><span>Span es una etiqueta en línea</span></p>
+
+        </section>
+
+        <!-- Imágenes, enlaces y rutas -->
+
+
+        <!-- Imágenes y enlaces -->
+
+        <section class="bloque">
+            <h2>Imágenes y enlaces</h2>
+            <img src="/.https://estaticos-cdn.prensaiberica.es/clip/e0db9202-fc80-4ecc-af75-648174798659_source-aspect-ratio_default_0.jpg" alt="Imagen de ejemplo">
+            <br>
+            <a href="https://www.google.com" target="_blank">Ir a Google</a>
+        </section>
+
+        <!-- Listas -->
+
+        <!-- Práctica: Listas -->
+
+        <section class="bloque">
+            <h2>Listas</h2>
+
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+
+            <ol>
+                <li>Primero</li>
+                <li>Segundo</li>
+            </ol>
+        </section>
+
+        <!-- Tablas -->
+
+        <!-- Bordes de tablas -->
+    
+        <section class="bloque">
+            <h2>Tablas</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Formularios HTML -->
+
+        <!--Formularios -->
+        <section class="bloque">
+            <h2>Formulario</h2>
+
+            <form>
+                <label>Nombre:</label>
+                <input type="text"><br><br>
+
+                <label>Email:</label>
+                <input type="email"><br><br>
+
+                <label>Contraseña:</label>
+                <input type="password"><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <!-- Etiquetas multimedia -->
+
+        <section class="bloque">
+            <h2>Multimedia</h2>
+
+            <video width="200" controls>
+                <source src="video.mp4" type="video/mp4"> // No tentgo un video añadido pero el codigo esta correcto
+            </video>
+
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg"> // No tengo un audio añadido pero el codigo esta corercto
+            </audio>
+        </section>
+
+        <!-- Accesibilidad en HTML -->
+
+        <section class="bloque">
+
+            <h2>Accesibilidad</h2>
+            <img src="https://via.placeholder.com/100" alt="Imagen accesible con texto alternativo">
+            <button aria-label="Botón accesible">Botón</button>
+
+        </section>
+
+        <!-- Otras etiquetas -->
+
+        <section class="bloque caja">
+            <h2>Otras etiquetas</h2>
+            <details>
+                <summary>Ver más</summary>
+                <p>Contenido oculto</p>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bloque">
+        <p>&copy; 2026 - Ejemplo HTML</p>
+    </footer>
+
+    //Cuestiones de optimización y herramientas relacionadas con CSS sobre el video visto.
+
+    <!-- Optimización de CSS:
+         Usar pocos selectores, evitar duplicados -->
+
+    <!-- Herramientas relacionadas con CSS:
+         Chrome DevTools, VS Code, Lighthouse -->
+
+</body>
+</html>
