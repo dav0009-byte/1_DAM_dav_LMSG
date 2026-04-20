@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej10</title>
+</head>
+<body>
+
+    <h1 id="titulo" onmouseover="raton()"
+    onmouseout="raton()">Desarrollo de Aplicaciones
+    <br>Multiplataforma/Web</h1>
+
+    <script>
+
+        function raton(elemento)
+    {
+        var dur=document.getElementById("duracion");
+        if (dur.style.fontSize=="4rem"){
+            dur.style.fontSize="1.5rem";}
+        else
+        {dur.style.fontSize="4rem";}
+    }
+
+    </script>
+        
+</body>
+</html>

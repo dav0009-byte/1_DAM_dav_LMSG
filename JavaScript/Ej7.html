@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej7</title>
+</head>
+<body>
+    
+    <p id = "texto"> Pulse el boton </p>
+
+    <p>Otro parrafo </p>
+    <button onclick="Estilo()">Cambiar Estilo</button> <!-- Botón que ejecuta la función al hacer clic -->
+
+    <script>
+
+        /* Crea una función JavaScript que cambie el color del texto de un párrafo a rojo  y el tamaño de la letra 
+            al pulsar un botón.
+        
+           El párrafo tiene id="texto", y el botón ejecutará la función al hacer clic. */
+
+        function Estilo(){
+
+            var parrafo = document.getElementByTagName("p")[0]; // Obtiene el primer elemento <p>
+            console.log(parrafo);
+            
+            parrafo.style.color = "red"; // Cambia el color del texto a rojo
+            parrafo.style.fontSize = "20px"; // Cambia el tamaño de la letra a 20px
+            parrafo.style.backgroundColor = "yellow"; // Cambia el color de fondo a amarillo
+            parrafo.innerHTML = "El estilo <b> ha sido cambiado </b>"; // Cambia el contenido del párrafo
+
+        }
+    </script>    
+    
+</body>
+</html>

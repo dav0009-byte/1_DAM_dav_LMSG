@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Funciones</title>
+</head>
+<body>  
+<script>
+
+    var cad ="Lenguaje de Marcas"
+    var array;
+
+    //funciones de texto
+
+    document.write("Longitud" + cad.length + "<br>"); 
+
+    document.write("Mayusculas" + cad.toUpperCase() + "<br>");
+
+    document.write("Minusculas" + cad.toLowerCase() + "<br>");
+
+    document.write(cad.charAt(5) + "<br>");
+
+    document.write(cad.indexOf("Marcas") + "<br>");
+
+    document.write(cad.substring(5,10) + "<br>");
+
+    cad.includes("Madrid") ? document.write("Si, se encuentra la palabra Madrid <br>") : 
+                             document.write("No, se encuentra la palabra Madrid <br>"); //operadores ternarios
+
+    array = cad.split(" "); //divide la cadena en un array de palabras, utilizando el espacio como separador
+
+    console.log (array);
+
+    array.pop(); //elimina el ultimo elemento del array
+
+    console.log (array);
+
+    array.push("HTML"); //agrega un nuevo elemento al final del array
+
+    console.log (array);
+
+    array.shift(); //elimina el primer elemento del array
+
+    console.log (array);
+
+    array.unshift("Lenguaje"); //agrega un nuevo elemento al inicio del array
+
+    console.log (array);
+
+    document.write(array.reverse()); //invierte el orden de los elementos del array
+
+    console.log (array);
+
+    document.write("Cadena: " + array.join(" ") + "<br>"); //une los elementos del array en una cadena, separandolos por un espacio
+
+
+
+
+</script>
+</body>
+</html>

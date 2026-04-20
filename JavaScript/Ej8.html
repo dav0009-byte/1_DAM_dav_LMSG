@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej8</title>
+</head>
+<body>
+
+    <p id = "texto">Texto de Ejemplo </p>
+
+    <button onclick="changeColor('red')">Rojo</button>
+    <button onclick="changeColor('blue')">Azul</button>
+
+    <script>
+
+    /*Crea una función en JavaScript que permita al usuario introducir texto en un campo de formulario.
+      
+    Al hacer clic en un botón, dicho texto debe añadirse como un nuevo elemento <li> dentro de una lista <ul>.
+        
+    Si el campo está vacío, el fondo del campo de texto debe ponerse rojo para indicar error. */
+
+    function changeColor(color) {
+
+        var parrafo = document.getElementById("texto"); // Obtiene el campo de texto
+
+        parrafo.style.color = color; // Cambia el color del texto
+        parrafo.style.fontSize = "20px"; // Cambia el tamaño de la letra a 20px
+ 
+    } 
+      
+    </script>
+</body>
+</html>
