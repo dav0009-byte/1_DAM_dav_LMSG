@@ -1,0 +1,78 @@
+--------------------------------------------------------------------------------------------------------------------------
+
+1. Comandos de Selección Básica (Rutas)
+Son los que definen dónde empezar a buscar.
+
+/ (Raíz): Selecciona desde el nodo raíz.
+
+Ejemplo: /concesionario/coche (Solo busca coches que sean hijos directos de concesionario).
+
+// (Descendente): Busca en cualquier parte del documento, sin importar el nivel.
+
+Ejemplo: //modelo (Encuentra todos los modelos, estén donde estén).
+
+. (Nodo actual): Se usa para referirse al sitio donde estás parado ahora mismo.
+
+.. (Nodo padre): Sube un nivel en el árbol.
+
+Ejemplo: //modelo/.. (Selecciona el nodo <coche> que contiene al modelo).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+2. Comandos de Atributos (@)
+En XML, los atributos están dentro de la etiqueta de apertura. Para acceder a ellos usamos la arroba.
+
+Seleccionar un atributo: //coche/@marca (Devuelve "Toyota" y "Tesla").
+
+Filtrar por atributo: //coche[@id='c01'] (Selecciona solo el coche con ese ID específico).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3. Predicados (Filtros [])
+Se escriben entre corchetes y sirven para "limpiar" los resultados.
+
+Por posición: * //coche[1] (El primer coche).
+
+//coche[last()] (El último coche).
+
+Por valor numérico:
+
+//coche[precio > 30000] (Solo el Tesla).
+
+Por existencia de elemento:
+
+//coche[precio] (Selecciona los coches que tengan una etiqueta precio).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+4. Funciones XPath Útiles
+Estas son las "estrellas" de los exámenes prácticos porque permiten hacer lógica compleja.
+
+contains(): Busca texto parcial.
+
+Ejemplo: //modelo[contains(., 'Model')] (Busca modelos que contengan la palabra "Model").
+
+count(): Cuenta elementos.
+
+Ejemplo: count(//coche) (Devolvería el número 2).
+
+sum(): Suma valores numéricos.
+
+Ejemplo: sum(//precio) (Suma todos los precios del catálogo).
+
+starts-with(): Comprueba con qué empieza el texto.
+
+Ejemplo: //coche[starts-with(@marca, 'T')] (Traería el Toyota y el Tesla).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+5. Operadores Lógicos
+Puedes combinar varios filtros en una sola línea:
+
+and: //coche[precio > 20000 and @marca='Toyota']
+
+or: //coche[@marca='Toyota' or @marca='Tesla']
+
+| (Unión): Sirve para traer dos cosas distintas a la vez.
+
+Ejemplo: //modelo | //precio (Trae una lista con todos los modelos y todos los precios mezclados).

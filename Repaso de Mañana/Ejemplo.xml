@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda>
+    
+    <producto codigo="PROD-001">
+        <nombre>Smartphone Galaxy</nombre>
+        <marca>Samsung</marca>
+        <precio moneda="EUR">899.00</precio>
+        <stock>15</stock>
+        <categoria>moviles</categoria>
+    </producto>
+    
+    <producto codigo="PROD-002">
+        <nombre>Laptop XPS 13</nombre>
+        <marca>Dell</marca>
+        <precio moneda="USD">1200.50</precio>
+        <stock>5</stock>
+        <categoria>ordenadores</categoria>
+    </producto>
+    
+</tienda>
