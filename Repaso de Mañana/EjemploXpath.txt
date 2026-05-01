@@ -1,0 +1,66 @@
+<concesionario>
+    <coche id="c01" marca="Toyota">
+        <modelo>Corolla</modelo>
+        <precio moneda="EUR">25000</precio>
+    </coche>
+    <coche id="c02" marca="Tesla">
+        <modelo>Model 3</modelo>
+        <precio moneda="USD">45000</precio>
+    </coche>
+</concesionario>
+
+Seleccionar un atributo: //coche/@marca (Devuelve "Toyota" y "Tesla").
+
+Filtrar por atributo: //coche[@id='c01'] (Selecciona solo el coche con ese ID específico).
+
+-----------------------------------------------------------------------------------------------------
+
+Predicados (Filtros [])
+Se escriben entre corchetes y sirven para "limpiar" los resultados.
+
+Por posición: * //coche[1] (El primer coche).
+
+//coche[last()] (El último coche).
+
+Por valor numérico:
+
+//coche[precio > 30000] (Solo el Tesla).
+
+Por existencia de elemento:
+
+//coche[precio] (Selecciona los coches que tengan una etiqueta precio).
+
+
+-----------------------------------------------------------------------------------------------------
+
+Funciones XPath Útiles
+Estas son las "estrellas" de los exámenes prácticos porque permiten hacer lógica compleja.
+
+contains(): Busca texto parcial.
+
+Ejemplo: //modelo[contains(., 'Model')] (Busca modelos que contengan la palabra "Model").
+
+count(): Cuenta elementos.
+
+Ejemplo: count(//coche) (Devolvería el número 2).
+
+sum(): Suma valores numéricos.
+
+Ejemplo: sum(//precio) (Suma todos los precios del catálogo).
+
+starts-with(): Comprueba con qué empieza el texto.
+
+Ejemplo: //coche[starts-with(@marca, 'T')] (Traería el Toyota y el Tesla).
+
+-----------------------------------------------------------------------------------------------------
+
+Operadores Lógicos
+Puedes combinar varios filtros en una sola línea:
+
+and: //coche[precio > 20000 and @marca='Toyota']
+
+or: //coche[@marca='Toyota' or @marca='Tesla']
+
+| (Unión): Sirve para traer dos cosas distintas a la vez.
+
+Ejemplo: //modelo | //precio (Trae una lista con todos los modelos y todos los precios mezclados).
