@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej12</title>
+</head>
+<body>
+
+    <script>
+
+        var array = [];
+
+        for(i=1;i<=6;i++){
+            
+            var numero = Math.floor(Math.random()*49)+1;
+            array.push(numero);
+
+            if(array.includes(numero)){
+                array.push(numero);
+
+            }
+        }
+       
+        document.write(array);
+
+
+    </script>
+    
+</body>
+</html>

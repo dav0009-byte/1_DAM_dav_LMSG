@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej14</title>
+</head>
+<body>
+    
+    <script>
+
+        var frase = prompt("Introduce una frase");
+
+        checkSpam(frase);
+
+        function checkSpam(str){
+
+            var frase = str.toLowerCase();
+
+            if(frase.includes("viagra") || frase.includes("xxx")){
+                document.write("La frase es spam");
+            }else{
+                document.write("La frase no es spam");
+            }
+    }
+
+
+    </script>
+
+</body>
+</html>

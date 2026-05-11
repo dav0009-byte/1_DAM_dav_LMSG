@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej15</title>
+</head>
+<body>
+    
+    <script>
+
+        var frase = prompt("Introduce una frase");
+
+        var contador = 0;
+
+        for(i=0;i<frase.length;i++){
+
+            if(frase.charAt(i).toLocaleLowerCase() == "a" || 
+            frase.charAt(i).toLocaleLowerCase() == "e" || 
+            frase.charAt(i).toLocaleLowerCase() == "i" || 
+            frase.charAt(i).toLocaleLowerCase() == "o" || 
+            frase.charAt(i).toLocaleLowerCase() == "u"){
+
+                contador++;
+
+            }
+
+            
+            
+        }
+
+        document.write("El número de vocales en la frase es: " + contador);
+
+
+    </script>
+
+</body>
+</html>
