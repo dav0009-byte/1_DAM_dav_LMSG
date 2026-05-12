@@ -1,28 +1,37 @@
 function adduser() {
 
-    var username = document.getElementById("username");
-    var password = document.getElementById("password");
-    var confirmPassword = document.getElementById("confirmPasword");
-    var registeredUsers = document.getElementById("registeredUsers")
+    var usuario = document.getElementById("username");
+    var contrasenia = document.getElementById("password");
+    var confirmarContrasenia = document.getElementById("confirmPassword");
 
-    var texto = username.value() || password.value() || confirmPassword.value();
+    if(usuario.value == "" || contrasenia.value =="" || confirmarContrasenia.value == ""){
 
-    if (texto == "") {
+        alert("Falta algun dato");
 
-        input.style.backgroundColor ="red";
-        alert("El campo no puede estar vacio");
+    } else if (contrasenia.value != confirmarContrasenia.value) {
 
-    } else {
+        contrasenia.style.backgroundColor = "red";
+        confirmarContrasenia.style.backgroundColor = "red";
+        
+        contrasenia.value = "Las contraseñas no coinciden";
+        confirmarContrasenia.value = "Las contraseñas no coinciden";
 
-        var lista = document.gets.getElementByTagName ("ul")[0];
-        var nuevoLi = document.createElement("li");
-            nuevoLi.innerHTML = texto;
-            lista.appendChild(nuevoLi);
-            input.style.backgroundColor = "White";
-            input.value = "";
+        contrasenia.type = "text";
+        confirmarContrasenia.type = "text";
+
+    } else { 
+
+        var userinfo = document.getElementById("registeredUsers");
+        var parrafo = document.createElement("p");
+
+        parrafo.innerHTML = "Usuario: " + usuario.value + "// Contraseña : " + contrasenia.value;
+        userinfo.appendChild(parrafo);
+
+        document.getElementById("username").value="";
+        document.getElementById("password").value="";
+        document.getElementById("confirmPassword").value="";
+
 
     }
-
-    document.write("Nombre : " + nombre + "// " + "Contraseña : " + contrasenia);
 
 }
