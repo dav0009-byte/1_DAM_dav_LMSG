@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <tienda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation="tienda.xsd">
   
@@ -18,4 +19,24 @@
     <categoria>ordenadores</categoria>
   </producto>
 
+=======
+<tienda>
+    
+    <producto codigo="PROD-001">
+        <nombre>Smartphone Galaxy</nombre>
+        <marca>Samsung</marca>
+        <precio moneda="EUR">899.00</precio>
+        <stock>15</stock>
+        <categoria>moviles</categoria>
+    </producto>
+    
+    <producto codigo="PROD-002">
+        <nombre>Laptop XPS 13</nombre>
+        <marca>Dell</marca>
+        <precio moneda="USD">1200.50</precio>
+        <stock>5</stock>
+        <categoria>ordenadores</categoria>
+    </producto>
+    
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e
 </tienda>

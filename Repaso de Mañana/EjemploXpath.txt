@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <concesionario>
     <coche id="c01" marca="Toyota">
         <modelo>Corolla</modelo>
@@ -8,14 +9,45 @@
         <precio moneda="USD">45000</precio>
     </coche>
 </concesionario>
+=======
+--------------------------------------------------------------------------------------------------------------------------
+
+1. Comandos de Selección Básica (Rutas)
+Son los que definen dónde empezar a buscar.
+
+/ (Raíz): Selecciona desde el nodo raíz.
+
+Ejemplo: /concesionario/coche (Solo busca coches que sean hijos directos de concesionario).
+
+// (Descendente): Busca en cualquier parte del documento, sin importar el nivel.
+
+Ejemplo: //modelo (Encuentra todos los modelos, estén donde estén).
+
+. (Nodo actual): Se usa para referirse al sitio donde estás parado ahora mismo.
+
+.. (Nodo padre): Sube un nivel en el árbol.
+
+Ejemplo: //modelo/.. (Selecciona el nodo <coche> que contiene al modelo).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+2. Comandos de Atributos (@)
+En XML, los atributos están dentro de la etiqueta de apertura. Para acceder a ellos usamos la arroba.
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e
 
 Seleccionar un atributo: //coche/@marca (Devuelve "Toyota" y "Tesla").
 
 Filtrar por atributo: //coche[@id='c01'] (Selecciona solo el coche con ese ID específico).
 
+<<<<<<< HEAD
 -----------------------------------------------------------------------------------------------------
 
 Predicados (Filtros [])
+=======
+--------------------------------------------------------------------------------------------------------------------------
+
+3. Predicados (Filtros [])
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e
 Se escriben entre corchetes y sirven para "limpiar" los resultados.
 
 Por posición: * //coche[1] (El primer coche).
@@ -30,10 +62,16 @@ Por existencia de elemento:
 
 //coche[precio] (Selecciona los coches que tengan una etiqueta precio).
 
+<<<<<<< HEAD
 
 -----------------------------------------------------------------------------------------------------
 
 Funciones XPath Útiles
+=======
+--------------------------------------------------------------------------------------------------------------------------
+
+4. Funciones XPath Útiles
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e
 Estas son las "estrellas" de los exámenes prácticos porque permiten hacer lógica compleja.
 
 contains(): Busca texto parcial.
@@ -52,9 +90,15 @@ starts-with(): Comprueba con qué empieza el texto.
 
 Ejemplo: //coche[starts-with(@marca, 'T')] (Traería el Toyota y el Tesla).
 
+<<<<<<< HEAD
 -----------------------------------------------------------------------------------------------------
 
 Operadores Lógicos
+=======
+--------------------------------------------------------------------------------------------------------------------------
+
+5. Operadores Lógicos
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e
 Puedes combinar varios filtros en una sola línea:
 
 and: //coche[precio > 20000 and @marca='Toyota']
@@ -63,4 +107,8 @@ or: //coche[@marca='Toyota' or @marca='Tesla']
 
 | (Unión): Sirve para traer dos cosas distintas a la vez.
 
+<<<<<<< HEAD
 Ejemplo: //modelo | //precio (Trae una lista con todos los modelos y todos los precios mezclados).
+=======
+Ejemplo: //modelo | //precio (Trae una lista con todos los modelos y todos los precios mezclados).
+>>>>>>> a5f9a0189f3b1b608f489484a5c3cb15ee80299e

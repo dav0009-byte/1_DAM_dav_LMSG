@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej17</title>
+</head>
+<body>
+
+    <script>
+
+    var web = prompt("Introduce una dirección web");
+    var slug = prompt("Escribe el nombre del titulo");
+
+    crearSlug(web,slug);
+
+    function crearSlug(web,slug){
+
+        var texto = post.tolowerCase(" ").join("-");
+        console.log(texto);
+        var url = ("https://" + web + "/" + slug);
+        document.write(url);
+        document.write("<br>");
+        document.write("La url creada tiene: " + url.length + " caracteres");
+
+    }
+
+    </script>
+    
+</body>
+</html>
