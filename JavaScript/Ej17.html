@@ -1,31 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ej17</title>
+    <title>Generador de Slug - Blog</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 { color: #333; margin-top: 0; }
+        .input-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Evita que el padding ensanche el input */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover { background-color: #218838; }
+        .result {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            word-break: break-all; /* Para que URLs largas no rompan el diseño */
+        }
+        .char-count {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
 
-    <script>
+<div class="card">
+    <h2>Generador de URL (Slug)</h2>
+    
+    <div class="input-group">
+        <label for="web">Web principal:</label>
+        <input type="text" id="web" placeholder="ej: https://www.aprendojs.com">
+    </div>
 
-    var web = prompt("Introduce una dirección web");
-    var slug = prompt("Escribe el nombre del titulo");
+    <div class="input-group">
+        <label for="titulo">Título del Post:</label>
+        <input type="text" id="titulo" placeholder="ej: Como usar Strings en Javascript">
+    </div>
 
-    crearSlug(web,slug);
+    <button onclick="procesarSlug()">Generar Slug</button>
 
-    function crearSlug(web,slug){
+    <div id="resultadoContainer" class="result" style="display: none;">
+        <strong>URL Generada:</strong>
+        <div id="urlTexto"></div>
+        <div id="longitudTexto" class="char-count"></div>
+    </div>
+</div>
 
-        var texto = post.tolowerCase(" ").join("-");
-        console.log(texto);
-        var url = ("https://" + web + "/" + slug);
-        document.write(url);
-        document.write("<br>");
-        document.write("La url creada tiene: " + url.length + " caracteres");
+<script>
+    function generarSlug(web, tituloPost) {
+        // 1. Pasar a minúsculas
+        let tituloMinusculas = tituloPost.toLowerCase();
 
+        // 2. Unir palabras con guiones
+        // Usamos una expresión regular / +/g para detectar uno o más espacios
+        let slug = tituloMinusculas.trim().replace(/\s+/g, '-');
+
+        // 3. Construir URL asegurando la barra diagonal
+        let base = web.endsWith('/') ? web : web + '/';
+        let urlFinal = base + slug;
+
+        return {
+            url: urlFinal,
+            caracteres: urlFinal.length
+        };
     }
 
-    </script>
-    
+    function procesarSlug() {
+        const web = document.getElementById('web').value;
+        const titulo = document.getElementById('titulo').value;
+        const contenedor = document.getElementById('resultadoContainer');
+
+        if (web === "" || titulo === "") {
+            alert("Por favor, rellena ambos campos.");
+            return;
+        }
+
+        const objetoSlug = generarSlug(web, titulo);
+
+        // Mostrar resultados en el HTML
+        document.getElementById('urlTexto').innerText = objetoSlug.url;
+        document.getElementById('longitudTexto').innerText = "Caracteres totales: " + objetoSlug.caracteres;
+        contenedor.style.display = "block";
+    }
+</script>
+
 </body>
 </html>
